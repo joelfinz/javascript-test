@@ -103,4 +103,4 @@ const coolArrayCheckingFunction = (menuItemArray, cartItemsArray) => {
   );
 };
 
-console.log(coolArrayCheckingFunction(catArray,cartCase2)?"SAME":"NOT SAME")
+console.log(coolArrayCheckingFunction(catArray,cartCase1))
