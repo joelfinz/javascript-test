@@ -80,7 +80,6 @@ const cartCase2 = [
   { id: 5376, name: "ITEM52", price: 100 }
 ];
 
-
 const coolArrayCheckingFunction = (menuItemArray, cartItemsArray) => {
   let filteredItems = [];
   cartItemsArray.map(cartItem => {
@@ -89,7 +88,7 @@ const coolArrayCheckingFunction = (menuItemArray, cartItemsArray) => {
         if (menuItem.id === cartItem.id) {
           console.log("crewmate", cartItem);
           filteredItems.push(cartItem);
-          return true;
+          return filteredItems;
         } else return false;
       });
     });
@@ -98,9 +97,12 @@ const coolArrayCheckingFunction = (menuItemArray, cartItemsArray) => {
   console.log("Filter Array length: ", filteredItems.length);
   console.log("Cart Array: ", cartItemsArray);
   console.log("Cart Array length: ", cartItemsArray.length);
-  console.log(
-    filteredItems.length === cartItemsArray.length ? "EQUAL" : "NOT EQUAL"
-  );
+  // console.log(
+  //   filteredItems.length === cartItemsArray.length ? "EQUAL" : "NOT EQUAL"
+  // );
+  return filteredItems.length === cartItemsArray.length;
 };
 
-console.log(coolArrayCheckingFunction(catArray,cartCase1))
+// cartCase1
+// cartCase2
+console.log(coolArrayCheckingFunction(catArray, cartCase1));
